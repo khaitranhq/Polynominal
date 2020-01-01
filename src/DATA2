@@ -1,1 +1,13 @@
-10
+n = 4
+str = 5x^4 + 3x^3 + 2x^2 + x + 5+
+P.arr[cnt].second() = 5
+P.arr[cnt].second() = 3
+P.arr[cnt].second() = 2
+P.arr[cnt].second() = 0
+P.arr[cnt].second() = 5
+P.arr[i].second() = 0
+P.arr[i].second() = 0
+P.arr[i].second() = 0
+P.arr[i].second() = 0
+P.arr[i].second() = 5
+0 0 0 0 5 
