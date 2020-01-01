@@ -1,13 +1,5 @@
-n = 4
-str = 5x^4 + 3x^3 + 2x^2 + x + 5+
-P.arr[cnt].second() = 5
-P.arr[cnt].second() = 3
-P.arr[cnt].second() = 2
-P.arr[cnt].second() = 0
-P.arr[cnt].second() = 5
-P.arr[i].second() = 0
-P.arr[i].second() = 0
-P.arr[i].second() = 0
-P.arr[i].second() = 0
-P.arr[i].second() = 5
-0 0 0 0 5 
+Tong hai da thuc: 5x^4 + 3x^3 + 3x^2 + x + 6
+Hieu hai da thuc: 5x^4 - -3x^3 + x^2 + x + 4
+Tich hai da thuc: 15x^7 + 5x^6 + 6x^5 + 10x^4 + 16x^3 + 7x^2 + x + 5
+Thuong cua da thuc chia cho (x - 5): 5x^3 + 25x^2 + 127x + 636
+Du cua da thuc chia cho (x - 5): 3185

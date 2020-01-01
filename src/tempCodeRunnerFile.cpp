@@ -1,5 +1,2 @@
 
-    // for (int i = 0; i < P.sizeArr; ++i)
-    //     in >> P.arr[i].second();
-
-    // P.fixed();
+    static Pair<int, double> res(ans, 0);
