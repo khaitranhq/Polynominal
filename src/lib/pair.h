@@ -1,95 +1,52 @@
 #pragma once
 
-template <typename S, typename T>
+template <class S, class T>
 class Pair
-   {
-      public:
-               Pair();
-               Pair(S,T);
-               Pair(Pair &);
-               ~Pair();
-               const Pair &operator=(const Pair &other);
+{
+public:
+    Pair(){}
+    Pair(const S &, const T &);
+    Pair(const Pair &);
+    const Pair &operator=(const Pair &other);
 
-               S& first();
-               T& second();
-      private:
-               S *f;
-               T *s;
-               static int count;
+    S &first();
+    T &second();
 
-   };
-// 0-parameter constructor
-template <typename S, typename T>
-Pair<S,T>::Pair()
-   {
-      f = new S;
-      s = new T;
-   }
+private:
+    S f;
+    T s;
+};
 
 // 2-param constructor
-template <typename S, typename T>
-Pair<S,T>::Pair(S x, T y)
-   {
-      f = new S;  *f = x;
-      s = new T;  *s = y;
-   }
+template <class S, class T>
+Pair<S, T>::Pair(const S &x, const T &y)
+{
+   f = x; s= y;
+}
 
 //copy constructor
-template <typename S, typename T>
-Pair<S,T>::Pair(Pair &other)
+template <class S, class T>
+Pair<S, T>::Pair(const Pair<S, T> &other)
 {
-f = NULL; s = NULL;
-    if(other.f != NULL)
-    f = new S(*other.f);
-
-    if(other.s != NULL)
-    s = new T(*other.s);
-}
-//destructor
-
-template <typename S, typename T>
-Pair<S,T>::~Pair()
-{
-    if(f != NULL)
-    delete f;
-
-    if(s != NULL)
-    delete s;
-
-    f = NULL;
-    s = NULL;
+    f = other.f;
+    s = other.s;
 }
 
-//deep assignment
-
-template <typename S, typename T>
-const Pair<S,T> & Pair<S,T>::operator=(const Pair<S,T> &other)
+template <class S, class T>
+const Pair<S, T> &Pair<S, T>::operator=(const Pair<S, T> &other)
 {
-    if(this != &other)
-    {
-        if(f != NULL)
-        delete f;
-
-        if(s != NULL)
-        delete s;
-
-        f = NULL; s = NULL;
-
-        if(other.f != NULL)
-        f = new S(*other.f);
-
-        if(other.s != NULL)
-        s = new T(*other.s);
-    }
+    f = other.f; s = other.s;
     return *this;
 }
 
-template<typename S, typename T>
-S& Pair<S, T>::first(){
-    return *f;
+template <class S, class T>
+S& Pair<S, T>::first()
+{
+    return this -> f;
 }
 
-template<typename S, typename T>
-T& Pair<S, T>::second(){
-    return *s;
+template <class S, class T>
+T& Pair<S, T>::second()
+{
+    return this -> s;
 }
